@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\Daniel\\\\Documents\\\\Projects\\\\Personal-Blog\" -Directory)",
+      "Bash(Select-Object FullName)",
+      "Bash(Remove-Item \"c:\\\\Users\\\\Daniel\\\\Documents\\\\Projects\\\\Personal-Blog\\\\articles\\\\building-personal-cloud.html\")"
+    ]
+  }
+}
