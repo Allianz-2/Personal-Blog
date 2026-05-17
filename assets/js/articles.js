@@ -19,7 +19,7 @@
 (function () {
   'use strict';
 
-  var ARTICLES_URL = '/data/articles.json';
+  var ARTICLES_URL = 'data/articles.json';
 
   // ----- Helpers ------------------------------------------
 
@@ -57,7 +57,7 @@
 
   function rowMarkup(article) {
     return (
-      '<a href="/articles/' + escapeHtml(article.slug) + '.html" ' +
+      '<a href="articles/' + escapeHtml(article.slug) + '.html" ' +
          'class="article-row" data-tag="' + escapeHtml(article.tag) + '">' +
         '<img class="article-row__thumb" ' +
              'src="' + escapeHtml(article.thumb) + '" ' +
@@ -75,7 +75,7 @@
 
   function listMarkup(article) {
     return (
-      '<a href="/articles/' + escapeHtml(article.slug) + '.html" ' +
+      '<a href="articles/' + escapeHtml(article.slug) + '.html" ' +
          'class="list-row" data-tag="' + escapeHtml(article.tag) + '">' +
         '<div class="list-row__date">' + formatDate(article.date) + '</div>' +
         '<h3 class="list-row__title">' + escapeHtml(article.title) + '</h3>' +
@@ -122,7 +122,7 @@
       containers.forEach(function (c) {
         c.innerHTML =
           '<p class="bio">Couldn\'t load the article list. ' +
-          '<a href="/articles.html">Try the full archive</a>.</p>';
+          '<a href="articles.html">Try the full archive</a>.</p>';
       });
     });
 

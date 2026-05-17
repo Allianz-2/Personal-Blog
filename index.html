@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#F8F7F3" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#15140F" media="(prefers-color-scheme: dark)">
 
-  <title>Daniel Spies — Writing on software, data, and design</title>
+  <title>Daniel Spies â€” Writing on software, data, and design</title>
   <meta name="description" content="Personal site of Daniel Spies. Articles on software projects, data analysis, and notes on the practice of building things.">
   <link rel="canonical" href="https://daniel-spies.com/">
 
@@ -16,26 +16,26 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Daniel Spies">
   <meta property="og:url" content="https://daniel-spies.com/">
-  <meta property="og:title" content="Daniel Spies — Writing on software, data, and design">
+  <meta property="og:title" content="Daniel Spies â€” Writing on software, data, and design">
   <meta property="og:description" content="Personal site of Daniel Spies. Articles on software projects, data analysis, and notes on the practice of building things.">
-  <!-- TODO: create /assets/images/og/default.png at 1200×630px. -->
+  <!-- TODO: create /assets/images/og/default.png at 1200Ã—630px. -->
   <meta property="og:image" content="https://daniel-spies.com/assets/images/og/default.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
   <!-- Twitter card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Daniel Spies — Writing on software, data, and design">
+  <meta name="twitter:title" content="Daniel Spies â€” Writing on software, data, and design">
   <meta name="twitter:description" content="Personal site of Daniel Spies. Articles on software projects, data analysis, and notes on the practice of building things.">
   <meta name="twitter:image" content="https://daniel-spies.com/assets/images/og/default.png">
 
-  <!-- Favicon — TODO: provide /favicon.svg and /favicon.ico. -->
-  <link rel="icon" href="/favicon.ico" sizes="32x32">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <!-- Favicon â€” TODO: provide /favicon.svg and /favicon.ico. -->
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-  <!-- RSS feed — TODO: generate /feed.xml in the build script. -->
-  <link rel="alternate" type="application/rss+xml" title="Daniel Spies" href="/feed.xml">
+  <!-- RSS feed â€” TODO: generate /feed.xml in the build script. -->
+  <link rel="alternate" type="application/rss+xml" title="Daniel Spies" href="feed.xml">
 
   <!-- ============================================================
        Theme bootstrap.
@@ -51,7 +51,7 @@
         if (saved === 'light' || saved === 'dark') {
           document.documentElement.setAttribute('data-theme', saved);
         }
-      } catch (e) { /* localStorage blocked — fall back to OS pref */ }
+      } catch (e) { /* localStorage blocked â€” fall back to OS pref */ }
     })();
   </script>
 
@@ -60,10 +60,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap">
 
-  <!-- Stylesheets in cascade order: base → layout → components. -->
-  <link rel="stylesheet" href="/assets/css/base.css">
-  <link rel="stylesheet" href="/assets/css/layout.css">
-  <link rel="stylesheet" href="/assets/css/components.css">
+  <!-- Stylesheets in cascade order: base â†’ layout â†’ components. -->
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
 
   <!-- Structured data: WebSite + author Person. -->
   <script type="application/ld+json">
@@ -83,14 +83,14 @@
 </head>
 <body>
 
-  <!-- Keyboard skip link — first focusable element on the page. -->
+  <!-- Keyboard skip link â€” first focusable element on the page. -->
   <a href="#main" class="skip-link">Skip to content</a>
 
   <header class="site-nav">
     <div class="site-nav__inner">
-      <a href="/" class="site-nav__brand">Daniel Spies</a>
+      <a href="./" class="site-nav__brand">Daniel Spies</a>
 
-      <!-- Hamburger toggle (mobile only — hidden by CSS on desktop). -->
+      <!-- Hamburger toggle (mobile only â€” hidden by CSS on desktop). -->
       <button type="button"
               class="site-nav__toggle"
               aria-expanded="false"
@@ -104,9 +104,9 @@
       <div class="site-nav__menu" id="site-nav-menu">
         <nav aria-label="Primary">
           <ul class="site-nav__links">
-            <li><a href="/"              class="site-nav__link" aria-current="page">Home</a></li>
-            <li><a href="/articles.html" class="site-nav__link">Articles</a></li>
-            <li><a href="/about.html"    class="site-nav__link">About</a></li>
+            <li><a href="./"              class="site-nav__link" aria-current="page">Home</a></li>
+            <li><a href="articles.html" class="site-nav__link">Articles</a></li>
+            <li><a href="about.html"    class="site-nav__link">About</a></li>
           </ul>
         </nav>
 
@@ -140,9 +140,9 @@
            1. This block (title, subtitle, tag, slug, hero image)
            2. data/articles.json (prepend the new entry)
          ============================================================ -->
-    <a href="/articles/next-cat-matlala.html"
+    <a href="articles/next-cat-matlala.html"
        class="hero hero--featured hero-link">
-      <img src="/assets/images/cat-matlala.png"
+      <img src="assets/images/cat-matlala.png"
            alt=""
            class="hero__image"
            fetchpriority="high"
@@ -157,9 +157,9 @@
     <!-- ============================================================
          LATEST LIST.
          Populated by /assets/js/articles.js from data/articles.json.
-           data-list           — marks this container for the script
-           data-list-variant   — "row" (with thumb) or "list" (compact)
-           data-list-limit="4" — render at most 4 entries
+           data-list           â€” marks this container for the script
+           data-list-variant   â€” "row" (with thumb) or "list" (compact)
+           data-list-limit="4" â€” render at most 4 entries
          ============================================================ -->
     <section class="column" aria-labelledby="latest-heading">
       <h2 class="eyebrow" id="latest-heading">Latest</h2>
@@ -170,23 +170,23 @@
            data-list-limit="4">
         <noscript>
           <p>Enable JavaScript to see the latest articles, or
-            <a href="/articles.html">view all articles</a>.</p>
+            <a href="articles.html">view all articles</a>.</p>
         </noscript>
       </div>
 
-      <a href="/articles.html" class="arrow-link">
+      <a href="articles.html" class="arrow-link">
         <span>All articles</span>
-        <span class="arrow-link__arrow" aria-hidden="true">→</span>
+        <span class="arrow-link__arrow" aria-hidden="true">â†’</span>
       </a>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="site-footer__inner">
-      <span>© 2026 Daniel Spies</span>
+      <span>Â© 2026 Daniel Spies</span>
       <nav class="site-footer__links" aria-label="Footer">
-        <a href="/about.html"  class="site-footer__link">About</a>
-        <a href="/articles.html" class="site-footer__link">Articles</a>
+        <a href="about.html"  class="site-footer__link">About</a>
+        <a href="articles.html" class="site-footer__link">Articles</a>
         <!-- TODO: confirm your GitHub username for this link. -->
         <a href="https://github.com/daniel-spies" class="site-footer__link" rel="me">GitHub</a>
       </nav>
@@ -194,7 +194,7 @@
   </footer>
 
   <!-- Scripts at the end, deferred so they don't block render. -->
-  <script src="/assets/js/theme.js" defer></script>
-  <script src="/assets/js/articles.js" defer></script>
+  <script src="assets/js/theme.js" defer></script>
+  <script src="assets/js/articles.js" defer></script>
 </body>
 </html>

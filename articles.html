@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -6,26 +6,26 @@
   <meta name="theme-color" content="#F8F7F3" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#15140F" media="(prefers-color-scheme: dark)">
 
-  <title>Articles — Daniel Spies</title>
+  <title>Articles â€” Daniel Spies</title>
   <meta name="description" content="Articles by Daniel Spies on software projects, data analysis, and notes on the practice of building things.">
   <link rel="canonical" href="https://daniel-spies.com/articles.html">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Daniel Spies">
   <meta property="og:url" content="https://daniel-spies.com/articles.html">
-  <meta property="og:title" content="Articles — Daniel Spies">
+  <meta property="og:title" content="Articles â€” Daniel Spies">
   <meta property="og:description" content="Articles by Daniel Spies on software projects, data analysis, and notes on the practice of building things.">
   <meta property="og:image" content="https://daniel-spies.com/assets/images/og/default.png">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Articles — Daniel Spies">
+  <meta name="twitter:title" content="Articles â€” Daniel Spies">
   <meta name="twitter:description" content="Articles by Daniel Spies on software projects, data analysis, and notes on the practice of building things.">
   <meta name="twitter:image" content="https://daniel-spies.com/assets/images/og/default.png">
 
-  <link rel="icon" href="/favicon.ico" sizes="32x32">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="alternate" type="application/rss+xml" title="Daniel Spies" href="/feed.xml">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="Daniel Spies" href="feed.xml">
 
   <script>
     (function () {
@@ -42,16 +42,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap">
 
-  <link rel="stylesheet" href="/assets/css/base.css">
-  <link rel="stylesheet" href="/assets/css/layout.css">
-  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "url": "https://daniel-spies.com/articles.html",
-    "name": "Articles — Daniel Spies",
+    "name": "Articles â€” Daniel Spies",
     "description": "Articles by Daniel Spies on software projects, data analysis, and notes on the practice of building things.",
     "author": {
       "@type": "Person",
@@ -67,7 +67,7 @@
 
   <header class="site-nav">
     <div class="site-nav__inner">
-      <a href="/" class="site-nav__brand">Daniel Spies</a>
+      <a href="./" class="site-nav__brand">Daniel Spies</a>
 
       <button type="button"
               class="site-nav__toggle"
@@ -82,9 +82,9 @@
       <div class="site-nav__menu" id="site-nav-menu">
         <nav aria-label="Primary">
           <ul class="site-nav__links">
-            <li><a href="/"              class="site-nav__link">Home</a></li>
-            <li><a href="/articles.html" class="site-nav__link" aria-current="page">Articles</a></li>
-            <li><a href="/about.html"    class="site-nav__link">About</a></li>
+            <li><a href="./"              class="site-nav__link">Home</a></li>
+            <li><a href="articles.html" class="site-nav__link" aria-current="page">Articles</a></li>
+            <li><a href="about.html"    class="site-nav__link">About</a></li>
           </ul>
         </nav>
 
@@ -111,7 +111,7 @@
 
     <section class="hero hero--page" aria-labelledby="articles-heading">
       <!-- TODO: replace with a hero image suited to the articles index. -->
-      <img src="/assets/images/placeholders/hero-articles.svg"
+      <img src="assets/images/placeholders/hero-articles.svg"
            alt=""
            class="hero__image"
            fetchpriority="high"
@@ -134,12 +134,12 @@
       </div>
 
       <!-- Full list. variant="list" renders compact date | title | tag
-           rows (no thumbnails). No skip, no limit — show everything. -->
+           rows (no thumbnails). No skip, no limit â€” show everything. -->
       <div id="articles-list"
            data-list
            data-list-variant="list">
         <noscript>
-          <p>Enable JavaScript to see the article list. The full list is also available in the <a href="/feed.xml">RSS feed</a>.</p>
+          <p>Enable JavaScript to see the article list. The full list is also available in the <a href="feed.xml">RSS feed</a>.</p>
         </noscript>
       </div>
 
@@ -151,10 +151,10 @@
 
   <footer class="site-footer">
     <div class="site-footer__inner">
-      <span>© 2026 Daniel Spies</span>
+      <span>Â© 2026 Daniel Spies</span>
       <nav class="site-footer__links" aria-label="Footer">
-        <a href="/about.html"  class="site-footer__link">About</a>
-        <a href="/articles.html" class="site-footer__link">Articles</a>
+        <a href="about.html"  class="site-footer__link">About</a>
+        <a href="articles.html" class="site-footer__link">Articles</a>
         <a href="https://github.com/daniel-spies" class="site-footer__link" rel="me">GitHub</a>
       </nav>
     </div>
@@ -162,8 +162,8 @@
 
   <!-- articles.js renders the list first, then filters.js binds the
        chip handlers. Load order matters here. -->
-  <script src="/assets/js/theme.js" defer></script>
-  <script src="/assets/js/articles.js" defer></script>
-  <script src="/assets/js/filters.js" defer></script>
+  <script src="assets/js/theme.js" defer></script>
+  <script src="assets/js/articles.js" defer></script>
+  <script src="assets/js/filters.js" defer></script>
 </body>
 </html>

@@ -5,8 +5,8 @@
     "subtitle": "Nobody blames themselves for the way things are, and nothing ever changes",
     "date": "2026-05-17",
     "tag": "Essay",
-    "hero": "/assets/images/cat-matlala.png",
-    "thumb": "/assets/images/cat-matlala.png"
+    "hero": "assets/images/cat-matlala.png",
+    "thumb": "assets/images/cat-matlala.png"
   },
   {
     "slug": "iran-crisis",
@@ -14,7 +14,7 @@
     "subtitle": "South Africans must brace for a difficult year ahead as inflation erodes their standard of living as prices begin to rise.",
     "date": "2026-05-12",
     "tag": "Essay",
-    "hero": "/assets/images/hormuz-crisis.png",
-    "thumb": "/assets/images/hormuz-crisis.png"
+    "hero": "assets/images/hormuz-crisis.png",
+    "thumb": "assets/images/hormuz-crisis.png"
   }
 ]
