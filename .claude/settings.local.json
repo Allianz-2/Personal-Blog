@@ -5,7 +5,10 @@
       "Bash(Select-Object FullName)",
       "Bash(Remove-Item \"c:\\\\Users\\\\Daniel\\\\Documents\\\\Projects\\\\Personal-Blog\\\\articles\\\\building-personal-cloud.html\")",
       "Bash(git add *)",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(python3 -c ' *)",
+      "Bash(python3 -c \"open\\('.nojekyll','wb'\\).write\\(b''\\)\")"
     ]
   }
 }
