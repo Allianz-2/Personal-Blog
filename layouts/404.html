@@ -1,0 +1,19 @@
+{{ define "title" }}Page not found — {{ site.Title }}{{ end }}
+
+{{ define "main" }}
+  <section class="hero hero--page" aria-labelledby="notfound-heading">
+    <img src="/assets/images/placeholders/hero-404.svg"
+         alt=""
+         class="hero__image"
+         fetchpriority="high"
+         decoding="async">
+    <div class="hero__content">
+      <h1 class="hero__heading" id="notfound-heading">Page not found</h1>
+    </div>
+  </section>
+
+  <div class="column">
+    <p class="bio">That URL doesn't lead anywhere on this site. It may have moved, been renamed, or never existed in the first place.</p>
+    <p class="bio">From here you can head back to the <a href="/">home page</a> or browse <a href="/articles.html">all articles</a>.</p>
+  </div>
+{{ end }}

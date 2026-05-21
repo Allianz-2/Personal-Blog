@@ -1,0 +1,68 @@
+{{ define "title" }}About — {{ site.Title }}{{ end }}
+
+{{ define "meta-social" }}
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:title" content="About — {{ site.Title }}">
+<meta property="og:description" content="{{ .Description }}">
+<meta property="og:image" content="{{ site.BaseURL }}assets/images/og/default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About — {{ site.Title }}">
+<meta name="twitter:description" content="{{ .Description }}">
+<meta name="twitter:image" content="{{ site.BaseURL }}assets/images/og/default.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Daniel Spies",
+  "url": "{{ site.BaseURL }}",
+  "sameAs": [
+    "{{ site.Params.github }}",
+    "{{ site.Params.linkedin }}"
+  ],
+  "jobTitle": "Software Developer",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Paarl",
+    "addressRegion": "Western Cape",
+    "addressCountry": "ZA"
+  }
+}
+</script>
+{{ end }}
+
+{{ define "main" }}
+  <section class="hero hero--page" aria-labelledby="about-heading">
+    <img src="/assets/images/placeholders/hero-about.svg"
+         alt=""
+         class="hero__image"
+         fetchpriority="high"
+         decoding="async">
+    <div class="hero__content">
+      <h1 class="hero__heading" id="about-heading">About</h1>
+    </div>
+  </section>
+
+  <div class="column">
+    {{ .Content }}
+
+    <hr class="divider">
+
+    <h2 class="eyebrow">Currently</h2>
+    <ul class="currently">
+      {{ range .Params.currently }}
+      <li class="currently__item">→ {{ . | markdownify }}</li>
+      {{ end }}
+    </ul>
+
+    <hr class="divider">
+
+    <h2 class="eyebrow">Get in touch</h2>
+    <div class="socials">
+      <a href="{{ site.Params.github }}"           class="socials__link" rel="me">GitHub</a>
+      <a href="{{ site.Params.linkedin }}"          class="socials__link" rel="me">LinkedIn</a>
+      <a href="mailto:{{ site.Params.email }}"      class="socials__link">Email</a>
+    </div>
+  </div>
+{{ end }}

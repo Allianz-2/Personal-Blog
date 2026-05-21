@@ -12,7 +12,23 @@
       "Bash(python3 -c \"from PIL import Image; print\\('Pillow available'\\)\")",
       "Bash(node -e \"require\\('sharp'\\); console.log\\('sharp available'\\)\")",
       "Bash(ffmpeg -version)",
-      "Bash(cwebp -version)"
+      "Bash(cwebp -version)",
+      "Bash(Get-ChildItem \"c:\\\\Users\\\\Daniel\\\\Documents\\\\Projects\\\\Personal-Blog\\\\static\\\\assets\\\\images\")",
+      "PowerShell(Get-ChildItem \"c:\\\\Users\\\\Daniel\\\\Documents\\\\Projects\\\\Personal-Blog\" -Recurse | Where-Object { $_.Extension -match \"\\\\.\\(png|webp|jpg|jpeg\\)$\" } | Select-Object FullName, Length)",
+      "PowerShell(Get-ChildItem \"c:\\\\Users\\\\Daniel\\\\Documents\\\\Projects\\\\Personal-Blog\" -Recurse -ErrorAction SilentlyContinue | Where-Object { $_.Name -match \"cat-matlala|hormuz\" } | Select-Object FullName)",
+      "PowerShell($env:PATH = $env:PATH + \";C:\\\\Users\\\\Daniel\\\\AppData\\\\Local\\\\Microsoft\\\\WinGet\\\\Links\"; Set-Location \"c:\\\\Users\\\\Daniel\\\\Documents\\\\Projects\\\\Personal-Blog\"; hugo 2>&1)",
+      "PowerShell(Get-Command hugo -ErrorAction SilentlyContinue; \\(Get-Command hugo -ErrorAction SilentlyContinue\\).Source)",
+      "PowerShell(Get-ChildItem \"C:\\\\Program Files\", \"C:\\\\Program Files \\(x86\\)\", \"$env:LOCALAPPDATA\" -Recurse -Filter \"hugo.exe\" -ErrorAction SilentlyContinue | Select-Object FullName)",
+      "PowerShell(winget list hugo 2>&1)",
+      "PowerShell(Get-ChildItem \"$env:LOCALAPPDATA\\\\Microsoft\\\\WinGet\" -Recurse -ErrorAction SilentlyContinue | Where-Object { $_.Name -match \"hugo\" } | Select-Object FullName)",
+      "PowerShell(Get-ChildItem \"$env:LOCALAPPDATA\\\\Microsoft\\\\WinGet\" -ErrorAction SilentlyContinue | Select-Object Name, FullName)",
+      "PowerShell(Test-Path \"$env:LOCALAPPDATA\\\\Microsoft\\\\WinGet\")",
+      "PowerShell([System.Environment]::GetEnvironmentVariable\\(\"PATH\", \"User\"\\) -split \";\" | Sort-Object)",
+      "PowerShell($hugo = \"C:\\\\Users\\\\Daniel\\\\AppData\\\\Local\\\\Microsoft\\\\WinGet\\\\Packages\\\\Hugo.Hugo.Extended_Microsoft.Winget.Source_8wekyb3d8bbwe\\\\hugo.exe\"; Set-Location \"c:\\\\Users\\\\Daniel\\\\Documents\\\\Projects\\\\Personal-Blog\"; & $hugo 2>&1)",
+      "PowerShell(Get-ChildItem \"c:\\\\Users\\\\Daniel\\\\Documents\\\\Projects\\\\Personal-Blog\\\\docs\" -Recurse | Where-Object { -not $_.PSIsContainer } | Select-Object FullName | ForEach-Object { $_.FullName.Replace\\(\"c:\\\\Users\\\\Daniel\\\\Documents\\\\Projects\\\\Personal-Blog\\\\docs\\\\\", \"docs/\"\\) })",
+      "PowerShell($hugo = \"C:\\\\Users\\\\Daniel\\\\AppData\\\\Local\\\\Microsoft\\\\WinGet\\\\Packages\\\\Hugo.Hugo.Extended_Microsoft.Winget.Source_8wekyb3d8bbwe\\\\hugo.exe\"; Set-Location \"c:\\\\Users\\\\Daniel\\\\Documents\\\\Projects\\\\Personal-Blog\"; & $hugo --cleanDestinationDir 2>&1)",
+      "PowerShell(Get-ChildItem \"c:\\\\Users\\\\Daniel\\\\Documents\\\\Projects\\\\Personal-Blog\\\\docs\" -Recurse | Where-Object { -not $_.PSIsContainer } | Select-Object @{N=\"Path\";E={$_.FullName.Substring\\(55\\)}})",
+      "PowerShell(Get-ChildItem \"c:\\\\Users\\\\Daniel\\\\Documents\\\\Projects\\\\Personal-Blog\\\\docs\" -Recurse | Where-Object { -not $_.PSIsContainer } | ForEach-Object { $_.FullName })"
     ]
   }
 }

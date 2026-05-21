@@ -1,0 +1,41 @@
+  <header class="site-nav">
+    <div class="site-nav__inner">
+      <a href="/" class="site-nav__brand">Daniel Spies</a>
+
+      <button type="button"
+              class="site-nav__toggle"
+              aria-expanded="false"
+              aria-controls="site-nav-menu"
+              aria-label="Open menu">
+        <span class="site-nav__toggle-line"></span>
+        <span class="site-nav__toggle-line"></span>
+        <span class="site-nav__toggle-line"></span>
+      </button>
+
+      <div class="site-nav__menu" id="site-nav-menu">
+        <nav aria-label="Primary">
+          <ul class="site-nav__links">
+            <li><a href="/"             class="site-nav__link"{{ if .IsHome }} aria-current="page"{{ end }}>Home</a></li>
+            <li><a href="/articles.html" class="site-nav__link"{{ if eq .RelPermalink "/articles.html" }} aria-current="page"{{ end }}>Articles</a></li>
+            <li><a href="/about.html"    class="site-nav__link"{{ if eq .RelPermalink "/about.html" }} aria-current="page"{{ end }}>About</a></li>
+          </ul>
+        </nav>
+
+        <button type="button" class="theme-toggle" aria-label="Switch theme">
+          <svg class="theme-toggle__icon theme-toggle__icon--moon"
+               xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="1.5"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <svg class="theme-toggle__icon theme-toggle__icon--sun"
+               xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="1.5"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>

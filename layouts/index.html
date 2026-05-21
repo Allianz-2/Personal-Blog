@@ -1,0 +1,71 @@
+{{ define "title" }}{{ site.Title }} — Writing on software, data, and design{{ end }}
+
+{{ define "meta-social" }}
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:title" content="{{ site.Title }} — Writing on software, data, and design">
+<meta property="og:description" content="{{ site.Params.description }}">
+<meta property="og:image" content="{{ site.BaseURL }}assets/images/og/default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ site.Title }} — Writing on software, data, and design">
+<meta name="twitter:description" content="{{ site.Params.description }}">
+<meta name="twitter:image" content="{{ site.BaseURL }}assets/images/og/default.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "url": "{{ site.BaseURL }}",
+  "name": "{{ site.Title }}",
+  "description": {{ site.Params.description | jsonify }},
+  "author": {
+    "@type": "Person",
+    "name": "Daniel Spies",
+    "url": "{{ site.BaseURL }}about.html"
+  }
+}
+</script>
+{{ end }}
+
+{{ define "main" }}
+  {{ $articles := where site.RegularPages "Section" "articles" }}
+  {{ $featured := index $articles 0 }}
+
+  <a href="{{ $featured.RelPermalink }}" class="hero hero--featured hero-link">
+    <img src="{{ $featured.Params.image }}"
+         alt=""
+         class="hero__image"
+         fetchpriority="high"
+         decoding="async">
+    <div class="hero__content">
+      <span class="hero__eyebrow">{{ $featured.Params.tag }}</span>
+      <h1 class="hero__title">{{ $featured.Title }}</h1>
+      <p class="hero__subtitle">{{ $featured.Description }}</p>
+    </div>
+  </a>
+
+  <section class="column" aria-labelledby="latest-heading">
+    <h2 class="eyebrow" id="latest-heading">Latest</h2>
+
+    {{ range first 4 $articles }}
+    <a href="{{ .RelPermalink }}" class="article-row" data-tag="{{ .Params.tag }}">
+      <img class="article-row__thumb"
+           src="{{ .Params.image }}"
+           alt="" loading="lazy" decoding="async">
+      <div class="article-row__body">
+        <h3 class="article-row__title">
+          {{ .Title }} <span class="tag">{{ .Params.tag }}</span>
+        </h3>
+        <div class="article-row__meta">{{ .Date.Format "2 Jan 2006" }}</div>
+      </div>
+    </a>
+    {{ end }}
+
+    <a href="/articles.html" class="arrow-link">
+      <span>All articles</span>
+      <span class="arrow-link__arrow" aria-hidden="true">→</span>
+    </a>
+  </section>
+{{ end }}
